@@ -8,19 +8,16 @@
 </head>
 <body>
   <div id="kdu-app">
-    <h1>Events</h1>
+    <h1>Keyboard Events</h1>
 
-    <button @click.once="add(1)">Add a Year</button>
-    <button k-on:click="subtract(1)">Subtract a Year</button>
-    <button @dblclick="add(10)">Add 10 Years</button>
-    <button k-on:dblclick="subtract(10)">Subtract 10 Years</button>
-    <p>My age is {{ age }}</p>
-
-    <div id="canvas" k-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
-
-    <a k-on:click.prevent="click" href="https://nkduy-cloud.web.app">NKDuy Cloud</a>
+    <label>Name:</label>
+    <input type="text" k-on:keyup.enter="logName" />
+    <label>Age:</label>
+    <input type="text" k-on:keyup.alt.enter="logAge" />
+    <label>Job:</label>
+    <input type="text" k-on:keyup="logJob" />
   </div>
-  
+
   <script src="app.js"></script>
 </body>
 </html>
