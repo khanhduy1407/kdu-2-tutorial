@@ -8,9 +8,14 @@
 </head>
 <body>
   <div id="kdu-app">
-    <h1>{{ greet("afternoon") }}</h1>
-    <p>Name: {{ name }}</p>
-    <p>Job: {{ job }}</p>
+    <h1>Data Binding</h1>
+    <a k-bind:href="website">NKDuy Cloud</a>
+    <a :href="website">NKDuy Cloud</a>
+
+    <input type="text" k-bind:value="name" />
+    <input type="text" :value="name" />
+
+    <p k-html="websiteTag"></p>
   </div>
   
   <script src="app.js"></script>
