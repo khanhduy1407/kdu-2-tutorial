@@ -11,11 +11,11 @@
     <h1>Keyboard Events</h1>
 
     <label>Name:</label>
-    <input type="text" k-on:keyup.enter="logName" />
+    <input type="text" k-model="name" />
+    <span>{{ name }}</span>
     <label>Age:</label>
-    <input type="text" k-on:keyup.alt.enter="logAge" />
-    <label>Job:</label>
-    <input type="text" k-on:keyup="logJob" />
+    <input type="text" k-model="age" />
+    <span>{{ age }}</span>
   </div>
 
   <script src="app.js"></script>
