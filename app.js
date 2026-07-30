@@ -1,14 +1,20 @@
 new Kdu({
   el: "#kdu-app",
   data: {
-    name: "NKDuy",
-    job: "Full-stack Software Engineer",
-    website: "https://nkduy-cloud.web.app",
-    websiteTag: "<a href='https://nkduy-cloud.web.app'>NKDuy Cloud</a>"
+    age: 23,
+    x: 0,
+    y: 0
   },
   methods: {
-    greet: function (time) {
-      return "Good " + time + ", " + this.name;
+    add: function (num) {
+      this.age += num
+    },
+    subtract: function (num) {
+      this.age -= num
+    },
+    updateXY: function (event) {
+      this.x = event.offsetX
+      this.y = event.offsetY
     }
   }
 })

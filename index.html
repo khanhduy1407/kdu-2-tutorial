@@ -8,14 +8,15 @@
 </head>
 <body>
   <div id="kdu-app">
-    <h1>Data Binding</h1>
-    <a k-bind:href="website">NKDuy Cloud</a>
-    <a :href="website">NKDuy Cloud</a>
+    <h1>Events</h1>
 
-    <input type="text" k-bind:value="name" />
-    <input type="text" :value="name" />
+    <button @click="add(1)">Add a Year</button>
+    <button k-on:click="subtract(1)">Subtract a Year</button>
+    <button @dblclick="add(10)">Add 10 Years</button>
+    <button k-on:dblclick="subtract(10)">Subtract 10 Years</button>
+    <p>My age is {{ age }}</p>
 
-    <p k-html="websiteTag"></p>
+    <div id="canvas" k-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
   </div>
   
   <script src="app.js"></script>
