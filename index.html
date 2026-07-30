@@ -8,14 +8,19 @@
 </head>
 <body>
   <div id="kdu-app">
-    <h1>Computed Properties</h1>
+    <h1>Dynamic CSS</h1>
+    
+    <h2>Example 1</h2>
+    <div k-on:click="available = !available" k-bind:class="{available: available}">
+      <span>NKDuy</span>
+    </div>
 
-    <button k-on:click="a++">Add to A</button>
-    <button k-on:click="b++">Add to B</button>
-    <p>A - {{ a }}</p>
-    <p>B - {{ b }}</p>
-    <p>Age + A = {{ addToA }}</p>
-    <p>Age + B = {{ addToB }}</p>
+    <h2>Example 2</h2>
+    <button k-on:click="available = !available">Toogle available</button>
+    <button k-on:click="nearby = !nearby">Toogle nearby</button>
+    <div k-bind:class="compClasses">
+      <span>NKDuy</span>
+    </div>
   </div>
 
   <script src="app.js"></script>
