@@ -5,8 +5,8 @@ new Kdu({
     job: "Full-stack Software Engineer"
   },
   methods: {
-    greet: function () {
-      return "Hello world!"
+    greet: function (time) {
+      return "Good " + time + ", " + this.name;
     }
   }
 })
