@@ -1,21 +1,12 @@
-Kdu.component('greeting', {
-  template: '<p>Hey there, I am {{ name }} . <button k-on:click="changeName">Change name</button></p>',
-  data: function () {
-    return {
-      name: 'NKDuy'
-    }
+new Kdu({
+  el: "#kdu-app",
+  data: {
+    output: 'Your fav food'
   },
   methods: {
-    changeName: function () {
-      this.name = 'DyGamer';
+    readRefs: function () {
+      console.log(this.$refs.test.innerText);
+      this.output = this.$refs.input.value;
     }
   }
-})
-
-new Kdu({
-  el: "#kdu-app-one"
-})
-
-new Kdu({
-  el: "#kdu-app-two"
 })
