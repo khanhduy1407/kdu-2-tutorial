@@ -8,25 +8,19 @@
 </head>
 <body>
   <div id="kdu-app">
-    <h1>Looping through lists</h1>
+    <!-- bag image -->
+    <div id="bag" k-bind:class="{ burst: ended }"></div>
 
-    <ul>
-      <li k-for="(character, index) in characters">{{ index }} . {{ character }}</li>
-    </ul>
-    <ul>
-      <li k-for="(ninja, index) in ninjas">{{ index }} . {{ ninja.name }} - {{ ninja.age }}</li>
-    </ul>
+    <!-- bag health -->
+    <div id="bag-health">
+      <div k-bind:style="{ width: health + '%' }"></div>
+    </div>
 
-    <template k-for="(ninja, index) in ninjas">
-      <h3>{{ index }} . {{ ninja.name }}</h3>
-      <p>{{ ninja.age }}</p>
-    </template>
-
-    <template k-for="ninja in ninjas">
-      <div k-for="(val, key) in ninja">
-        <p>{{ key }} - {{ val }}</p>
-      </div>
-    </template>
+    <!-- game controls -->
+    <div id="controls">
+      <button k-on:click="punch" k-show="!ended">Punch</button>
+      <button k-on:click="restart">Restart</button>
+    </div>
   </div>
 
   <script src="app.js"></script>
