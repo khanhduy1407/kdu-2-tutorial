@@ -8,19 +8,16 @@
 </head>
 <body>
   <div id="kdu-app">
-    <h1>Dynamic CSS</h1>
-    
-    <h2>Example 1</h2>
-    <div k-on:click="available = !available" k-bind:class="{available: available}">
-      <span>NKDuy</span>
-    </div>
+    <h1>Conditionals</h1>
 
-    <h2>Example 2</h2>
-    <button k-on:click="available = !available">Toogle available</button>
-    <button k-on:click="nearby = !nearby">Toogle nearby</button>
-    <div k-bind:class="compClasses">
-      <span>NKDuy</span>
-    </div>
+    <button k-on:click="error = !error">Toggle Error</button>
+    <button k-on:click="success = !success">Toggle Success</button>
+
+    <p k-if="error">There has been an error</p>
+    <p k-else-if="success">Whooo, success :)</p>
+
+    <p k-show="error">There has been an error</p>
+    <p k-show="success">Whooo, success :)</p>
   </div>
 
   <script src="app.js"></script>
