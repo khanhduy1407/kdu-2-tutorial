@@ -7,17 +7,16 @@
   <script src="https://unpkg.com/kdu@2.6.15"></script>
 </head>
 <body>
-  <h1>Multiple Kdu Instances</h1>
+  <h1>Components</h1>
 
   <div id="kdu-app-one">
-    <h2>{{ title }}</h2>
-    <p>{{ greet }}</p>
+    <h2>Kdu app one</h2>
+    <greeting></greeting>
   </div>
 
   <div id="kdu-app-two">
-    <h2>{{ title }}</h2>
-    <p>{{ greet }}</p>
-    <button k-on:click="changeTitle">Change App One Title</button>
+    <h2>Kdu app two</h2>
+    <greeting></greeting>
   </div>
 
   <script src="app.js"></script>

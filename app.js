@@ -1,32 +1,21 @@
-var one = new Kdu({
-  el: "#kdu-app-one",
-  data: {
-    title: 'Kdu App One'
+Kdu.component('greeting', {
+  template: '<p>Hey there, I am {{ name }} . <button k-on:click="changeName">Change name</button></p>',
+  data: function () {
+    return {
+      name: 'NKDuy'
+    }
   },
   methods: {
-  },
-  computed: {
-    greet: function () {
-      return 'Hello from app one :)'
+    changeName: function () {
+      this.name = 'DyGamer';
     }
   }
 })
 
-var two = new Kdu({
-  el: "#kdu-app-two",
-  data: {
-    title: 'Kdu App Two'
-  },
-  methods: {
-    changeTitle: function () {
-      one.title = "Title changed";
-    }
-  },
-  computed: {
-    greet: function () {
-      return 'Yo dudes, this is app 2 speaking to ya :)'
-    }
-  }
+new Kdu({
+  el: "#kdu-app-one"
 })
 
-two.title = "Changed from outside";
+new Kdu({
+  el: "#kdu-app-two"
+})
