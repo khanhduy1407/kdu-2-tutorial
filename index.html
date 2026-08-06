@@ -7,20 +7,17 @@
   <script src="https://unpkg.com/kdu@2.6.15"></script>
 </head>
 <body>
-  <div id="kdu-app">
-    <!-- bag image -->
-    <div id="bag" k-bind:class="{ burst: ended }"></div>
+  <h1>Multiple Kdu Instances</h1>
 
-    <!-- bag health -->
-    <div id="bag-health">
-      <div k-bind:style="{ width: health + '%' }"></div>
-    </div>
+  <div id="kdu-app-one">
+    <h2>{{ title }}</h2>
+    <p>{{ greet }}</p>
+  </div>
 
-    <!-- game controls -->
-    <div id="controls">
-      <button k-on:click="punch" k-show="!ended">Punch</button>
-      <button k-on:click="restart">Restart</button>
-    </div>
+  <div id="kdu-app-two">
+    <h2>{{ title }}</h2>
+    <p>{{ greet }}</p>
+    <button k-on:click="changeTitle">Change App One Title</button>
   </div>
 
   <script src="app.js"></script>

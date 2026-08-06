@@ -1,21 +1,32 @@
-new Kdu({
-  el: "#kdu-app",
+var one = new Kdu({
+  el: "#kdu-app-one",
   data: {
-    health: 100,
-    ended: false
+    title: 'Kdu App One'
   },
   methods: {
-    punch: function () {
-      this.health -= 10;
-      if (this.health <= 0) {
-        this.ended = true;
-      }
-    },
-    restart: function () {
-      this.health = 100;
-      this.ended = false;
+  },
+  computed: {
+    greet: function () {
+      return 'Hello from app one :)'
+    }
+  }
+})
+
+var two = new Kdu({
+  el: "#kdu-app-two",
+  data: {
+    title: 'Kdu App Two'
+  },
+  methods: {
+    changeTitle: function () {
+      one.title = "Title changed";
     }
   },
   computed: {
+    greet: function () {
+      return 'Yo dudes, this is app 2 speaking to ya :)'
+    }
   }
 })
+
+two.title = "Changed from outside";
