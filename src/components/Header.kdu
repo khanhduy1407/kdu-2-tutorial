@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     changeTitle: function () {
-      this.title = "Kdu Wizards";
+      this.$emit('changeTitle', 'Kdu Wizards');
     }
   }
 }
