@@ -2,14 +2,14 @@
   <div id="add-blog">
     <form>
       <label>Blog Title:</label>
-      <input type="text" required />
+      <input type="text" k-model="title" required />
       <label>Blog Content:</label>
-      <textarea></textarea>
+      <textarea k-model="content"></textarea>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
-      <p>Blog title:</p>
-      <p>Blog content:</p>
+      <p>Blog title: {{ title }}</p>
+      <p>Blog content: {{ content }}</p>
     </div>
   </div>
 </template>
@@ -18,7 +18,8 @@
 export default {
   data() {
     return {
-
+      title: '',
+      content: ''
     }
   },
   methods: {
@@ -57,4 +58,5 @@ textarea {
 
 h3 {
   margin-top: 10px;
-}</style>
+}
+</style>
