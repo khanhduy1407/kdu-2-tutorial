@@ -1,6 +1,16 @@
 <template>
-  <div>
-
+  <div id="add-blog">
+    <form>
+      <label>Blog Title:</label>
+      <input type="text" required />
+      <label>Blog Content:</label>
+      <textarea></textarea>
+    </form>
+    <div id="preview">
+      <h3>Preview Blog</h3>
+      <p>Blog title:</p>
+      <p>Blog content:</p>
+    </div>
   </div>
 </template>
 
