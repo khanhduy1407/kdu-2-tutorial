@@ -2,14 +2,15 @@
   <div id="add-blog">
     <form>
       <label>Blog Title:</label>
-      <input type="text" k-model="title" required />
+      <input type="text" k-model.lazy="blog.title" required />
       <label>Blog Content:</label>
-      <textarea k-model="content"></textarea>
+      <textarea k-model.lazy="blog.content"></textarea>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
-      <p>Blog title: {{ title }}</p>
-      <p>Blog content: {{ content }}</p>
+      <p>Blog title: {{ blog.title }}</p>
+      <p>Blog content:</p>
+      <p>{{ blog.content }}</p>
     </div>
   </div>
 </template>
@@ -18,8 +19,10 @@
 export default {
   data() {
     return {
-      title: '',
-      content: ''
+      blog: {
+        title: '',
+        content: ''
+      }
     }
   },
   methods: {
