@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     post: function () {
-      this.$http.post('')
+      this.$http.post('http://jsonplaceholer.typicode.com/posts')
     }
   }
 }
