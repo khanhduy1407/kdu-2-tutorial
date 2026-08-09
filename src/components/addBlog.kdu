@@ -19,6 +19,7 @@
       <select k-model="blog.author">
         <option k-for="author in authors">{{ author }}</option>
       </select>
+      <button k-on:click.prevent="post">Add Blog</button>
     </form>
     <div id="preview">
       <h3>Preview Blog</h3>
