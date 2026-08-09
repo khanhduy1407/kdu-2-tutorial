@@ -27,7 +27,7 @@ Kdu.directive('theme', {
 })
 
 // Filters
-Kdu.filter('to-uppercase', function (value) {
+Kdu.filter('toUpperCase', function (value) {
   return value.toUpperCase();
 })
 
