@@ -50,7 +50,13 @@ export default {
   },
   methods: {
     post: function () {
-      this.$http.post('http://jsonplaceholer.typicode.com/posts')
+      this.$http.post('http://jsonplaceholder.typicode.com/posts', {
+        title: this.blog.title,
+        body: this.blog.content,
+        userId: 1
+      }).then(function (data) {
+
+      });
     }
   }
 }
