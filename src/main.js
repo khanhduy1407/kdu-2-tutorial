@@ -5,11 +5,11 @@ import KduResource from 'kdu-resource'
 Kdu.use(KduResource);
 
 // Custom directives
-Kdu.directive('rainbow', {
-  bind(el, binding, knode) {
-    el.style.color = "#" + Math.random().toString().slice(2, 8);
-  }
-})
+// Kdu.directive('rainbow', {
+//   bind(el, binding, knode) {
+//     el.style.color = "#" + Math.random().toString().slice(2, 8);
+//   }
+// })
 
 Kdu.directive('theme', {
   bind(el, binding, knode) {
@@ -27,9 +27,9 @@ Kdu.directive('theme', {
 })
 
 // Filters
-Kdu.filter('toUpperCase', function (value) {
-  return value.toUpperCase();
-})
+// Kdu.filter('toUpperCase', function (value) {
+//   return value.toUpperCase();
+// })
 
 Kdu.filter('snippet', function (value) {
   return value.slice(0, 100) + "...";
