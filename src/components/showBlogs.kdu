@@ -3,7 +3,9 @@
     <h1>All Blog Articles</h1>
     <input type="text" k-model="search" placeholder="search blogs" />
     <div k-for="blog in filteredBlogs" class="single-blog">
-      <h2 k-rainbow>{{ blog.title | toUpperCase }}</h2>
+      <router-link k-bind:to="'/blog/' + blog.id">
+        <h2 k-rainbow>{{ blog.title | toUpperCase }}</h2>
+      </router-link>
       <article>{{ blog.body | snippet }}</article>
     </div>
   </div>
