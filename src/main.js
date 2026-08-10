@@ -1,8 +1,15 @@
 import Kdu from 'kdu'
 import App from './App.kdu'
 import KduResource from 'kdu-resource'
+import KduRouter from 'kdu-router';
+import Routes from './routes';
 
 Kdu.use(KduResource);
+Kdu.use(KduRouter);
+
+const router = new KduRouter({
+  routes: Routes
+})
 
 // Custom directives
 // Kdu.directive('rainbow', {
@@ -37,5 +44,6 @@ Kdu.filter('snippet', function (value) {
 
 new Kdu({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router: router
 })
