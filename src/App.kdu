@@ -1,17 +1,20 @@
 <template>
   <div>
     <show-blogs></show-blogs>
+    <list-blogs></list-blogs>
   </div>
 </template>
 
 <script>
 import addBlog from './components/addBlog.kdu';
 import showBlogs from './components/showBlogs.kdu';
+import listBlogs from './components/listBlogs.kdu';
 
 export default {
   components: {
     'add-blog': addBlog,
-    'show-blogs': showBlogs
+    'show-blogs': showBlogs,
+    'list-blogs': listBlogs
   },
   data() {
     return {
