@@ -8,7 +8,9 @@ Kdu.use(KduResource);
 Kdu.use(KduRouter);
 
 const router = new KduRouter({
-  routes: Routes
+  routes: Routes,
+  // https://kdujs-router-v3.web.app/guide/essentials/history-mode.html
+  mode: 'history'
 })
 
 // Custom directives
